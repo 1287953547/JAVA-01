@@ -8,8 +8,9 @@ import org.springframework.stereotype.Component;
  */
 @Component
 public class Student {
-    private int id=1;
-    private String name="lijing";
+    private int id = 1;
+    private String name = "lijing";
+
     @Override
     public String toString() {
         return "Student{" +
@@ -17,7 +18,6 @@ public class Student {
                 ", name='" + name + '\'' +
                 '}';
     }
-
 
 
     public int getId() {

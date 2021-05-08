@@ -5,31 +5,31 @@
        xsi:schemaLocation="
         http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd
         http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
-<!--    注解装配-->
+    <!--    注解装配-->
     <context:annotation-config>
 
     </context:annotation-config>
     <context:component-scan base-package="homework1.entity"></context:component-scan>
-<!--    手动装配-->
-<bean id="user" class="homework1.domain.User">
-    <property name="id" value="1"></property>
-    <property name="name" value="离境"></property>
-    <property name="city" value="CHENGDU"></property>
-    <property name="hobbies">
-        <list>
-            <value>"NBA"</value>
-            <value>"computerGame"</value>
-        </list>
-    </property>
-    <property name="phone" value="110,119"></property>
+    <!--    手动装配-->
+    <bean id="user" class="homework1.domain.User">
+        <property name="id" value="1"></property>
+        <property name="name" value="离境"></property>
+        <property name="city" value="CHENGDU"></property>
+        <property name="hobbies">
+            <list>
+                <value>"NBA"</value>
+                <value>"computerGame"</value>
+            </list>
+        </property>
+        <property name="phone" value="110,119"></property>
 
-</bean>
-<!--    自动装配-->
+    </bean>
+    <!--    自动装配-->
     <bean id="userRep" class="homework1.domain.UserRepository" autowire="byType">
-<!--        <property name="users" >-->
-<!--            <list>-->
-<!--                <ref bean="user"></ref>-->
-<!--            </list>-->
-<!--        </property>-->
+        <!--        <property name="users" >-->
+        <!--            <list>-->
+        <!--                <ref bean="user"></ref>-->
+        <!--            </list>-->
+        <!--        </property>-->
     </bean>
 </beans>

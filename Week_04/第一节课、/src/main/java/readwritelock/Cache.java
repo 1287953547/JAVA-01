@@ -44,7 +44,7 @@ public class Cache<K,V> {
     // 写缓存
     V put(K key, V value) {
         w.lock();
-        try { return m.put(key, v); }
+        try { return m.put(key, value); }
         finally { w.unlock(); }
     }
 }
